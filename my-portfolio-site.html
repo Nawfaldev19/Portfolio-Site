@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- background -20
+    hero section -2
+    hero image -1
+     -->
+    <!--------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <title>Nawfal Portfolio</title>
+
+    <style type="text/css">
+      .background {
+        width: 100%;
+        height: 100%;
+        background-color: #faf6f2;
+      }
+      a {
+        text-decoration: none;
+      }
+      /* --------------------------------------------------HELPERS-----------------------------------------------------------------------------------------------  */
+      .hole {
+        position: absolute;
+        display: flex;
+        top: 150px;
+        left: 470px;
+        width: 500px;
+        height: 500px;
+        border-radius: 100%;
+        box-shadow: 0 0 0 9999px #faf6f2;
+        /* box-shadow: 0 0 0 9999px rgba(0, 0, 255, 0.2); */
+      }
+      .bottomLeft-Shadow {
+        box-shadow: 6px 6px 1px #d49e8d;
+      }
+      .topRight-Shadow {
+        box-shadow: -6px -6px 1px #9f2e0c;
+      }
+
+      /* ----------------------------------------------------NAVBAR---------------------------------------------------------------------------------------------  */
+
+      #navbar {
+        width: 100%;
+        height: 50px;
+        top: 0;
+        left: 0;
+        z-index: 20;
+
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: 2px 2px 2px #d49e8d;
+        background: linear-gradient(#683b2b, #b5674a);
+      }
+      .navbar-items-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+      .navbar-item {
+        padding-right: 30px;
+        color: #faf6f2;
+        text-transform: uppercase;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      .navbar-item:hover {
+        font-weight: bold;
+        font-size: 105%;
+        transition: 0.5s ease-out;
+        transition-property: font-size;
+      }
+      /* ---------------------------------------------------HERO SECTION----------------------------------------------------------------------------------------------  */
+      .hero-section {
+        position: relative;
+        display: flex;
+        top: 40px;
+        height: 700px;
+        opacity: 90%;
+        /* background-color: #d6d2ce; to remove */
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-section h1 {
+        display: flex;
+        font-weight: bold;
+      }
+      .hero-section img {
+        border-radius: 50%;
+      }
+      /* ---------------------------------------------------ABOUT ME SECTION----------------------------------------------------------------------------------------------  */
+      .about-me-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: blue; */
+        height: 700px;
+      }
+      .about-me-width-height-textbox-section {
+        width: 70%;
+        height: 600px;
+      }
+      .about-me-textbox-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+        background-color: #f1f0f0;
+        height: 100%;
+      }
+      .about-me-textbox-section h1 {
+        font-weight: bolder;
+      }
+      .about-me-textbox-info-section {
+        display: flex;
+        height: 80%;
+        padding: 20px;
+        box-sizing: border-box;
+
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+      }
+      .about-me-textbox-info-section img {
+        width: 400px;
+        height: 400px;
+      }
+
+      .about-me-textbox-info-section-para {
+        height: 100%;
+        box-sizing: border-box;
+        text-align: justify;
+        word-break: break-all;
+
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+
+      .about-me-textbox-info-section-para p {
+        padding-left: 30px;
+        padding-right: 20px;
+        box-sizing: border-box;
+      }
+      /* ---------------------------------------------------PROJECTS SECTION----------------------------------------------------------------------------------------------  */
+      .projects-section {
+        height: 700px;
+        /* background-color: cyan; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .projects-section h1 {
+        font-weight: bold;
+      }
+      .projects-section-ContentBox {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        height: 450px;
+        /* background-color: blue; */
+        justify-content: left;
+        align-items: center;
+        overflow-x: scroll;
+      }
+      .projects-section-ContentBox-item {
+        width: 350px;
+        height: 350px;
+        margin-right: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      .projects-section-ContentBox-item img {
+        border-radius: 20px;
+      }
+      .projects-section-ContentBox-item h1 {
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        bottom: 0px;
+        margin: 0;
+        background-color: #d49e8d;
+        color: #faf6f2;
+        /* text-shadow: 2px 2px black; */
+        -webkit-text-stroke: 1px #b54f30;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      /* ---------------------------------------------------CONTACT SECTION----------------------------------------------------------------------------------------------  */
+      .contact-form-section {
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #d49e8d;
+        justify-content: center;
+      }
+      .contact-form-section-item {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      .contact-form-section-item h1 {
+        margin: 10px;
+        color: #faf6f2;
+      }
+      .contact-form-section-item p {
+        margin: 10px;
+        color: #faf6f2;
+      }
+      .contact-form-section-item-FormStructure {
+        width: 750px;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .contact-form-section-item-FormStructure-LS {
+        width: 40%;
+        height: 100%;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+      }
+      .contact-form-section-item-FormStructure-LS-item {
+        margin: 10px;
+      }
+      .contact-form-section-item-FormStructure-LS-item p {
+        margin: 2px;
+        color: #faf6f2;
+      }
+      .contact-form-section-item-FormStructure-LS-item input {
+        width: 100%;
+        height: 33px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+      .contact-form-section-item-FormStructure-RS {
+        width: 60%;
+        height: 100%;
+        margin: 10px;
+        display: flex;
+        align-items: left;
+        justify-content: center;
+      }
+      .contact-form-section-item-FormStructure-RS-item {
+        margin: 10px;
+        height: 100%;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 100px;
+        align-items: left;
+        justify-content: center;
+      }
+      .contact-form-section-item-FormStructure-RS-item p {
+        margin: 2px;
+        color: #faf6f2;
+      }
+      .contact-form-section-item-FormStructure-RS-item input[type="text"] {
+        width: 400px;
+        height: 80%;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+      }
+      .contact-form-section-item-FormStructure-RS-item input[type="submit"] {
+        position: relative;
+        border: 1px solid #e26f4c;
+        font-weight: bold;
+        background-color: #e26f4c;
+        color: #faf6f2;
+        border-radius: 9px;
+        margin: 10px;
+        width: 100px;
+        height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 70%;
+        left: 73.3%;
+      }
+      /* ---------------------------------------------------SIT END SECTION----------------------------------------------------------------------------------------------  */
+      .end-section {
+        position: relative;
+        bottom: 0px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #a02e0c;
+      }
+      .end-section p {
+        padding-left: 45px;
+        color: #faf6f2;
+      }
+      .end-section-links {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        width: 135px;
+      }
+      .end-section-links a img {
+        width: 40px;
+        height: 40px;
+      }
+    </style>
+  </head>
+
+  <body class="background">
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------>
+    <div id="navbar">
+      <div class="navbar-items-list">
+        <a class="navbar-item" href="https://google.com">About Me</a>
+        <a class="navbar-item" href="https://google.com">Projects</a>
+        <a class="navbar-item" href="https://google.com">Contact Me</a>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------>
+
+    <div class="hero-section">
+      <img src="Strawberry-Sugar-Cookies-1-500x500.jpeg" />
+      <br />
+      <h1>Hi! I'm Nawfal, This is my Portfolio site.</h1>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------>
+
+    <div class="about-me-section">
+      <div class="about-me-width-height-textbox-section bottomLeft-Shadow">
+        <div class="about-me-textbox-section topRight-Shadow">
+          <h1>About Me</h1>
+          <div class="about-me-textbox-info-section">
+            <img src="Strawberry-Sugar-Cookies-1-500x500.jpeg" />
+            <div class="about-me-textbox-info-section-para">
+              <p>
+                Simply put, a paragraph is a collection of sentences all related
+                to a central topic, idea, or theme. Paragraphs act as structural
+                tools for writers to organize their thoughts into an ideal
+                progression, and they also help readers process those thoughts
+                effortlessly. Imagine how much harder reading and writing would
+                be if everything was just one long block of text. There’s a lot
+                of flexibility when it comes to writing paragraphs, but if
+                there’s one steadfast rule, it’s this: Paragraphs should relate
+                to one main topic or point. The paragraph itself often contains
+                multiple points spanning several sentences, but they should all
+                revolve around one core theme. Just as sentences build upon each
+                other to communicate the paragraph’s core theme, paragraphs work
+                together to communicate the core theme of the writing as a
+                whole. That’s the basic idea, but in practice there’s more to
+                it. Let’s look at the four main types of paragraphs to learn how
+                and when to use them.Simply put, a paragraph is a collection of
+                sentences all related to a central topic, idea, or theme.
+                Paragraphs act as structural tools for writers to organize their
+                thoughts into an ideal progression, and they also help readers
+                process those thoughts effortlessly. Imagine how much harder
+                reading and writing would be if everything was just one long
+                block of text. There’s a lot of flexibility when it comes to
+                writing paragraphs, but if there’s one steadfast rule, it’s
+                this: Paragraphs should relate to one main topic or point. The
+                paragraph itself often contains multiple points spanning several
+                sentences, but they should all revolve around one core theme.
+                Just as sentences build upon each other to communicate the
+                paragraph’s core theme, paragraphs work together to communicate
+                the core theme of the writing as a whole. That’s the basic idea,
+                but in practice there’s more to it. Let’s look at the four main
+                types of paragraphs to learn how and when to use them. Simply
+                put, a paragraph is a collection of sentences all related to a
+                central topic, idea, or theme. Paragraphs act as structural
+                tools for writers to organize their thoughts into an ideal
+                progression, and they also help readers process those thoughts
+                effortlessly. Imagine how much harder reading and writing would
+                be if everything was just one long block of text. There’s a lot
+                of flexibility when it comes to writing paragraphs, but if
+                there’s one steadfast rule, it’s this: Paragraphs should relate
+                to one main topic or point. The paragraph itself often contains
+                multiple points spanning several sentences, but they should all
+                revolve around one core theme. Just as sentences build upon each
+                other to communicate the paragraph’s core theme, paragraphs work
+                together to communicate the core theme of the writing as a
+                whole. That’s the basic idea, but in practice there’s more to
+                it. Let’s look at the four main types of paragraphs to learn how
+                and when to use them. Simply put, a paragraph is a collection of
+                sentences all related to a central topic, idea, or theme.
+                Paragraphs act as structural tools for writers to organize their
+                thoughts into an ideal progression, and they also help readers
+                process those thoughts effortlessly. Imagine how much harder
+                reading and writing would be if everything was just one long
+                block of text. There’s a lot of flexibility when it comes to
+                writing paragraphs, but if there’s one steadfast rule, it’s
+                this: Paragraphs should relate to one main topic or point. The
+                paragraph itself often contains multiple points spanning several
+                sentences, but they should all revolve around one core theme.
+                Just as sentences build upon each other to communicate the
+                paragraph’s core theme, paragraphs work together to communicate
+                the core theme of the writing as a whole. That’s the basic idea,
+                but in practice there’s more to it. Let’s look at the four main
+                types of paragraphs to learn how and when to use them. Simply
+                put, a paragraph is a collection of sentences all related to a
+                central topic, idea, or theme. Paragraphs act as structural
+                tools for writers to organize their thoughts into an ideal
+                progression, and they also help readers process those thoughts
+                effortlessly. Imagine how much harder reading and writing would
+                be if everything was just one long block of text. There’s a lot
+                of flexibility when it comes to writing paragraphs, but if
+                there’s one steadfast rule, it’s this: Paragraphs should relate
+                to one main topic or point. The paragraph itself often contains
+                multiple points spanning several sentences, but they should all
+                revolve around one core theme. Just as sentences build upon each
+                other to communicate the paragraph’s core theme, paragraphs work
+                together to communicate the core theme of the writing as a
+                whole. That’s the basic idea, but in practice there’s more to
+                it. Let’s look at the four main types of paragraphs to learn how
+                and when to use them.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------>
+    <div class="projects-section">
+      <h1>Projects</h1>
+      <div class="projects-section-ContentBox">
+        <div class="projects-section-ContentBox-item">
+          <img src="Strawberry-Sugar-Cookies-1-500x500.jpeg" />
+          <h1>Hobbit</h1>
+        </div>
+        <div class="projects-section-ContentBox-item">
+          <img src="Strawberry-Sugar-Cookies-1-500x500.jpeg" />
+          <h1>Hobbit</h1>
+        </div>
+        <div class="projects-section-ContentBox-item">
+          <img src="Strawberry-Sugar-Cookies-1-500x500.jpeg" />
+          <h1>Hobbit</h1>
+        </div>
+        <div class="projects-section-ContentBox-item">
+          <img src="Strawberry-Sugar-Cookies-1-500x500.jpeg" />
+          <h1>Hobbit</h1>
+        </div>
+        <div class="projects-section-ContentBox-item">
+          <img src="Strawberry-Sugar-Cookies-1-500x500.jpeg" />
+          <h1>Hobbit</h1>
+        </div>
+        <div class="projects-section-ContentBox-item">
+          <img src="Strawberry-Sugar-Cookies-1-500x500.jpeg" />
+          <h1>Hobbit</h1>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------>
+    <div class="contact-form-section">
+      <div class="contact-form-section-item"><h1>Contact</h1></div>
+      <div class="contact-form-section-item">
+        <p>Use this form to get in touch, I'd love to hear from you!</p>
+      </div>
+      <div class="contact-form-section-item-FormStructure">
+        <!-- ------------------------------------------- -->
+        <div class="contact-form-section-item-FormStructure-LS">
+          <div class="contact-form-section-item-FormStructure-LS-item">
+            <p>Name</p>
+            <input placeholder="Your Name" />
+          </div>
+          <div class="contact-form-section-item-FormStructure-LS-item">
+            <p>Subject</p>
+            <input placeholder="Reason for your message" />
+          </div>
+          <div class="contact-form-section-item-FormStructure-LS-item">
+            <p>Email Address</p>
+            <input placeholder="Your email address" />
+          </div>
+        </div>
+        <!-- ------------------------------------------- -->
+        <div class="contact-form-section-item-FormStructure-RS">
+          <div class="contact-form-section-item-FormStructure-RS-item">
+            <p>Message</p>
+            <input type="text" placeholder="Description" />
+            <input type="submit" value="SUBMIT" />
+          </div>
+        </div>
+        <!-- ------------------------------------------- -->
+      </div>
+    </div>
+    <div class="end-section">
+      <p>This site &#169;2023 Nawfal Imran</p>
+
+      <div class="end-section-links">
+        <a href="https://google.com">
+          <img src="twitter-icon-18-256.png" />
+        </a>
+        <a href="https://google.com">
+          <img
+            src="facebook-logo-png-white-facebook-logo-png-white-facebook-icon-png--32.png"
+            width="50px"
+            height="50px"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
